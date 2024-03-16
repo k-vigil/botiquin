@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --color: 5, 44, 101;
+    /* --color: 0, 50, 73; */
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body,
+.content-wrapper {
+    background-color: white;
+}
+
+#preloader {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000001;
+}
+
+.navbar {
+    background-color: rgb(var(--color));
+}
+
+.brand-link {
+    background-color: rgba(var(--color), .95);
+}
+
+.main-sidebar {
+    background-color: #f5f7fa;
+}
+
+.sidebar .nav-link {
+    box-shadow: none !important;
+}
+
+.sidebar .nav-item:hover .nav-link,
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(var(--color), .085) !important;
+}
+
+.sidebar .nav-link.active {
+    color: var(--primary) !important;
+    position: relative;
+}
+
+.sidebar .nav-link.active::before {
+    background-color: var(--primary);
+    border-radius: .25rem;
+    content: '';
+    height: 70%;
+    left: -2px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 4px;
+}
+
+#sidebar-overlay {
+    background-color: rgba(var(--color), .425);
+}
+
+.border-light {
+    border-color: #DFE1E6 !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(var(--color), .075) !important
+}
+
+.modal-backdrop {
+    background-color: rgb(var(--color));
+}
+
+.modal-backdrop.show {
+    opacity: .425;
+}
+
+.btn-light {
+    background-color: #EBECF0;
+    border-color: #EBECF0;
+}
+
+.btn-light:hover {
+    background-color: #DFE1E6;
+    border-color: #DFE1E6;
+}
+
+.btn-light:active {
+    background-color: #C1C7D0 !important;
+    border-color: #C1C7D0 !important;
+}
+
+.btn-link.text-muted:hover {
+    color: var(--primary) !important;
+}
+
+.form-control {
+    border: 2px solid #DFE1E6;
+}
+
+.form-control:focus {
+    border: 2px solid var(--primary);
+}
+
+.font-weight-semibold {
+    font-weight: 500 !important;
+}
