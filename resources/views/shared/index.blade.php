@@ -77,7 +77,7 @@
                         <li class="nav-item my-1"></li>
                         <li class="nav-item">
                             <a href="/categorias" class="nav-link" id="categorias">
-                                <i class="nav-icon fas fa-home"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>Categorias</p>
                             </a>
                         </li>
