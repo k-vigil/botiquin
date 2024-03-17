@@ -1,31 +1,30 @@
 @extends('shared.index')
 
 @section('content')
-<div style="max-width: 1100px;">
-    <div class="mb-3">
-        <a href="/dashboard">
-            <i class="fas fa-chevron-left"></i>
-            <span class="ml-1">Volver</span>
-        </a>
-        <h5 class="font-weight-semibold">Stocks</h5>
-    </div>
-    <div class="table-responsive">
-        <table class="table table-borderless table-hover dt-table">
-            <thead>
-                <tr>
-                    <th class="font-weight-semibold">#</th>
-                    <th class="font-weight-semibold">Codigo</th>
-                    <th class="font-weight-semibold" style="width: 220px;">Descripcion</th>
-                    <th class="font-weight-semibold">Registro DNM</th>
-                    <th class="font-weight-semibold">Cantidad</th>
-                    <th class="font-weight-semibold">Precio</th>
-                    <th class="font-weight-semibold">Lote</th>
-                    <th class="font-weight-semibold">Vencimiento</th>
-                </tr>
-            </thead>
-            <tbody id="tbody"></tbody>
-        </table>
-    </div>
+<div class="mb-3">
+    <a href="/dashboard">
+        <i class="fas fa-chevron-left"></i>
+        <span class="ml-1">Volver</span>
+    </a>
+    <h5 class="font-weight-semibold">Stocks</h5>
+</div>
+<div class="table-responsive">
+    <table class="table table-borderless table-hover dt-table">
+        <thead>
+            <tr>
+                <th class="font-weight-semibold">#</th>
+                <th class="font-weight-semibold">Laboratorio</th>
+                <th class="font-weight-semibold">Codigo</th>
+                <th class="font-weight-semibold" style="width: 220px;">Descripcion</th>
+                <th class="font-weight-semibold">Registro DNM</th>
+                <th class="font-weight-semibold">Cantidad</th>
+                <th class="font-weight-semibold">Precio</th>
+                <th class="font-weight-semibold">Lote</th>
+                <th class="font-weight-semibold">Vencimiento</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
 </div>
 
 @endsection
@@ -46,6 +45,7 @@
             html += `
                 <tr>
                     <td style="width: 80px;">${i.id}</td>
+                    <td>${i.medicamento_presentacion.medicamento.laboratorio.nombre}</td>
                     <td>${i.medicamento_presentacion.codigo}</td>
                     <td style="width: 220px;">${i.medicamento_presentacion.descripcion}</td>
                     <td>${i.medicamento_presentacion.registro_dnm}</td>

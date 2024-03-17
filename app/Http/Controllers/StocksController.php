@@ -14,7 +14,7 @@ class StocksController extends Controller
 
     public function listarStocks()
     {
-        $lista = Stock::with(['medicamento_presentacion', 'lote'])
+        $lista = Stock::with(['medicamento_presentacion.medicamento.laboratorio', 'lote'])
             ->where('cantidad', '>', 0)
             ->get();
 
